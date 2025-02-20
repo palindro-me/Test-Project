@@ -71,24 +71,21 @@ const StyledSkills = styled.section`
 const GridContainer = styled.div`
     display: grid;
     max-width: 1080px;
-    grid-template-columns: repeat(auto-fit, minmax(88px, auto));
-    //grid-template-columns: repeat(auto-fit, minmax(88px, 120px));
-    //grid-template-rows: repeat(auto-fit, minmax(120px, 160px));
-    justify-items: center;
-    align-content: center;
-
+    grid-template-columns: repeat(auto-fit, minmax(88px, 120px));
+    justify-content: center;
     column-gap: 120px;
     row-gap: 59px;
 
-    @media ${theme.media.tablet} {
+    // @media ${theme.media.tablet} {
+    @media screen and (max-width: 1050px) {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 100px 50px;
 
-        & > *:nth-child(-n +1) {
+        & > *:nth-last-child(-n +1) {
             justify-content: center;
-
+            background-color: red;
         }
     }`
     
